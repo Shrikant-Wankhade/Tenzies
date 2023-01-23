@@ -89,7 +89,10 @@
     color: #4A4E74;
 
 }
-
+.tries{
+    position: absolute;
+    top: 70%;
+}
 .button {
     position: absolute;
     top: 83%;
