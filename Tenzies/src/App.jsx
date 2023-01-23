@@ -54,9 +54,10 @@ export default function App() {
         }
       })
     )
-    // if(game){
-    //   setGame(false)
-    // }
+    if(game){
+      setGame(false);
+      setDice(setAllDice);
+    }
   } 
 
   function handleHold(currentId){
