@@ -12,17 +12,20 @@ export default function App() {
             <div>
             </div>
             <div className="main__board__content--dice">
-                      <div className="dice--face"><h2>1</h2></div>
-                      <div className="dice--face"><h2>1</h2></div>
-                      <div className="dice--face"><h2>1</h2></div>
-                      <div className="dice--face"><h2>1</h2></div>
-                      <div className="dice--face"><h2>1</h2></div>
-                      <div className="dice--face"><h2>1</h2></div>
-                      <div className="dice--face"><h2>1</h2></div>
-                      <div className="dice--face"><h2>1</h2></div>
-                      <div className="dice--face"><h2>1</h2></div>
-                      <div className="dice--face"><h2>1</h2></div>
+                      <div className="dice--face"><h2 className="dice-num">1</h2></div>
+                      <div className="dice--face"><h2 className="dice-num">1</h2></div>
+                      <div className="dice--face"><h2 className="dice-num">1</h2></div>
+                      <div className="dice--face"><h2 className="dice-num">1</h2></div>
+                      <div className="dice--face"><h2 className="dice-num">1</h2></div>
+                      <div className="dice--face"><h2 className="dice-num">1</h2></div>
+                      <div className="dice--face"><h2 className="dice-num">1</h2></div>
+                      <div className="dice--face"><h2 className="dice-num">1</h2></div>
+                      <div className="dice--face"><h2 className="dice-num">1</h2></div>
+                      <div className="dice--face"><h2 className="dice-num" >1</h2></div>
             </div>
+            <button className='button'>
+                Roll
+            </button>
       </div>
     </div>
   )
