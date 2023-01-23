@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 import Dice from "./components/dices"
 import Confetti from "react-confetti"
+import { nanoid } from 'nanoid'
 
 export default function App() {
 
   const [dice, setDice] = useState(setAllDice());
   const [game, setGame] = useState(false);
+  const [tries, setTries] = useState(0);
 
   function randomNum(){
     return Math.floor(Math.random() * 6) + 1;
@@ -25,7 +27,7 @@ export default function App() {
 
         if(allHeld.length === 10 && allValuesSame.length === 10){
           setGame(true)
-          console.log("You Won!")
+          console.log(`You Won! and took ${tries} tries`)
         }
 
     },[dice])
@@ -35,7 +37,7 @@ export default function App() {
     const items = []
       for(let i=0; i<10; i++){
         const newItem = {
-          id: i+1,
+          id: nanoid(),
           value: randomNum(),
           IsHeld:false
         }
@@ -54,6 +56,10 @@ export default function App() {
         }
       })
     )
+    //each time we roll up, increase a try
+    setTries(prevTries=>prevTries+1)
+    console.log(tries);
+
     if(game){
       setGame(false);
       setDice(setAllDice);
@@ -102,6 +108,7 @@ export default function App() {
             <div className="main__board__content--dice">
                   {diceElements}
             </div>
+            {game && <div className='tries'><h4>{`You took ${tries} tries`}</h4></div>}
             <button className='button' onClick={rollUp}>
                 {game ? "Reset Game" : "Roll Up"}
             </button>
