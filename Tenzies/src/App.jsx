@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Dice from "./components/dices"
-
+import Confetti from "react-confetti"
 
 export default function App() {
 
@@ -88,7 +88,10 @@ export default function App() {
   return (
     <div className="background__board">
       <div className="main__board">
-            
+            {game && <Confetti 
+                        width={320}
+                        height={320}
+                      />}
             <div className="main__board__content__text">
                   <h2 className='heading'>Tenzies</h2>
                   <p className='desc'>Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
