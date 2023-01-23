@@ -1,10 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import React, { useState } from 'react'
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
 
+  return (
+    <div className="background__board">
+      <div className="main__board">
+            <div className="main__board__content__text">
+                  <h2 className='heading'>Tenzies</h2>
+                  <p className='desc'>Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
+            </div>
+            <div>
+            </div>
+            <div className="main__board__content--dice">
+                      <div className="dice--face"><h2>1</h2></div>
+                      <div className="dice--face"><h2>1</h2></div>
+                      <div className="dice--face"><h2>1</h2></div>
+                      <div className="dice--face"><h2>1</h2></div>
+                      <div className="dice--face"><h2>1</h2></div>
+                      <div className="dice--face"><h2>1</h2></div>
+                      <div className="dice--face"><h2>1</h2></div>
+                      <div className="dice--face"><h2>1</h2></div>
+                      <div className="dice--face"><h2>1</h2></div>
+                      <div className="dice--face"><h2>1</h2></div>
+            </div>
+      </div>
+    </div>
+  )
  
 }
 
-export default App
